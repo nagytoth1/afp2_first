@@ -3,11 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>home</title>
-    {% load staticfiles %}
-    <link href="{% static 'css/bootstrap.min.css' %}" >  
-    <script src="{% static 'bootstrap.min.js' %}"></script>  
-    <script>alert();</script>   
+    {% load bootstrap5 %}
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+    <script>alert();</script>
 </head>
 <body>
+    <div class="container-fluid">
+        Hello World!
+      </div>
 </body>
 </html>
