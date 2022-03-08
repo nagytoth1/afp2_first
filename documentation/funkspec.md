@@ -67,18 +67,17 @@ kérem a kedves olvasót, hogy az erre vonatkozó résszel ott ismerkedjen meg.
 
 ### Követelménylista
 
-|    Modul    	| ID |       Név        	|                                                        Kifejtés                                                       		|
-|-------------	|----|--------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
-| Interface   	| I1 | Menüsor   		| Ne legyen túlgondolva, a PTI-s tárgyak legyenek kilistázva, ezekre kattintva átvisz a megfelelő oldal feladatlistájára. 		|
-| Interface	| I2 | Felhasználói felület	| A teljes felhasználói felület legyen leegyszerűsített, minimalista.									|
-| Interface 	| I3 | Egyéb hivatkozások      	| Legyenek hivatkozások a suli honlapjára, Neptun-oldalára, az e-learning-oldalra							|
-| Interface	| I4 | Feladatkiosztó		| A feladatok sablonjait töltsük ki az adatbázisból olvasott adatokkal.									|
-| Datastore 	| D1 | Adattárolási mód 	| Egy adatbázis-táblában eltároljuk a különböző tárgyakhoz kapcsolódó feladatok részleteit, ezek megfelelő helyekre beollózva.		|
+|    Modul    	| ID |       Név        		|                                                        Kifejtés                                                       			|
+|-------------	|----|--------------------------|-----------------------------------------------------------------------------------------------------------------------------------|
+| Interface   	| I1 | Menüsor   				| Ne legyen túlgondolva, a PTI-s tárgyak legyenek kilistázva, ezekre kattintva átvisz a megfelelő oldal feladatlistájára. 			|
+| Interface		| I2 | Felhasználói felület		| A teljes felhasználói felület legyen leegyszerűsített, minimalista.																|
+| Interface 	| I3 | Egyéb hivatkozások      	| Legyenek hivatkozások a suli honlapjára, Neptun-oldalára, az e-learning-oldalra													|
+| Interface		| I4 | Feladatkiosztó			| A feladatok sablonjait töltsük ki az adatbázisból olvasott adatokkal.																|
+| Datastore 	| D1 | Adattárolási mód 		| Egy adatbázis-táblában eltároljuk a különböző tárgyakhoz kapcsolódó feladatok részleteit, ezek megfelelő helyekre beollózva.		|
 | Datastore 	| D2 | Tervezett karbantartás	| A feladatok adatbázisa félévek kezdete előtti héten legyen takarítva, lehetőleg inkább egyre bővebb készlet álljon rendelkezésre.	|
-| Datastore 	| D3 | Adatbázis        	| Tároljuk az adatokat adatbázisban, szerkezete legyen a lehető legegyszerűbb, mivel sok feladat részleteit fogunk tárolni. 		|
-| Feature   	| F1 | Rendszeridő      	| Mutasson rendszeridőt a képernyő valamely, a munka szempontjából kevésbé zavaró részén.						|
-| Feature   	| F2 | Random adatolvasás      	| Az adatbázisból olvassunk ki véletlenszerűen egy rekordot (egy feladat-csomagot) a tárgynak megfelelő rekeszekből.			|
-							 								|
+| Datastore 	| D3 | Adatbázis        		| Tároljuk az adatokat adatbázisban, szerkezete legyen a lehető legegyszerűbb, mivel sok feladat részleteit fogunk tárolni. 		|
+| Feature   	| F1 | Rendszeridő      		| Mutasson rendszeridőt a képernyő valamely, a munka szempontjából kevésbé zavaró részén.											|
+| Feature   	| F2 | Random adatolvasás      	| Az adatbázisból olvassunk ki véletlenszerűen egy rekordot (egy feladat-csomagot) a tárgynak megfelelő rekeszekből.				|
 
 
 ### Használati esetek (use-case)
