@@ -1,6 +1,6 @@
-# Követelmény specifikáció
+# KÃ¶vetelmÃ©ny specifikÃ¡ciÃ³
 
-### Áttekintés
+### ÃttekintÃ©s
 
 
 
@@ -8,163 +8,165 @@
 
 
 
-### Vágyálomrendszer
+### VÃ¡gyÃ¡lomrendszer
 
-	- Tudjuk nyomon követni a rendszeridõt (naplózás és a hallgatók idõbeli igazodása szempontjából fontos)
-	- 45 percenként figyelmeztessen (hallgató álljon fel a géptõl, mozogjon)
-	- Jó lenne, ha adatbázis-kapcsolatot használhatnánk a késõbbiekben a feladatra adott válaszok pontszámainak tárolására (a session idejére).
-	- Jó lenne, ha meg tudnánk nézni a weboldal látogatásainak idõpontjait naplózás szempontjából.
-	- Szeretnénk, hogy az weboldal gördülékenyen reagáljon, legyen reszponzív.
-	- Az adatbázis legyen egy internetes repozitóriumból elérhetõ
+	- Tudjuk nyomon kÃ¶vetni a rendszeridÅ‘t (naplÃ³zÃ¡s Ã©s a hallgatÃ³k idÅ‘beli igazodÃ¡sa szempontjÃ¡bÃ³l fontos)
+	- 45 percenkÃ©nt figyelmeztessen (hallgatÃ³ Ã¡lljon fel a gÃ©ptÅ‘l, mozogjon)
+	- JÃ³ lenne, ha adatbÃ¡zis-kapcsolatot hasznÃ¡lhatnÃ¡nk a kÃ©sÅ‘bbiekben a feladatra adott vÃ¡laszok pontszÃ¡mainak tÃ¡rolÃ¡sÃ¡ra 
+	(a session idejÃ©re).
+	- JÃ³ lenne, ha meg tudnÃ¡nk nÃ©zni a weboldal lÃ¡togatÃ¡sainak idÅ‘pontjait naplÃ³zÃ¡s szempontjÃ¡bÃ³l.
+	- SzeretnÃ©nk, hogy az weboldal gÃ¶rdÃ¼lÃ©kenyen reagÃ¡ljon, legyen reszponzÃ­v.
+	- Az adatbÃ¡zis legyen egy internetes repozitÃ³riumbÃ³l elÃ©rhetÅ‘
 
-### Elvárások
+### ElvÃ¡rÃ¡sok
 
 
-## Követelménylista
+## KÃ¶vetelmÃ©nylista
 
-|    Modul    	| ID |       Név        	|                                                        Kifejtés                                                       		|
+|    Modul    	| ID |       NÃ©v        	|                                                        KifejtÃ©s                                                       		|
 |-------------	|----|--------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
-| Interface   	| I1 | Menüsor   		| Ne legyen túlgondolva, a PTI-s tárgyak legyenek kilistázva, ezekre kattintva átvisz a megfelelõ oldal feladatlistájára. 		|
-| Interface	| I2 | Felhasználói felület	| A teljes felhasználói felület legyen leegyszerûsített, minimalista.									|
-| Interface 	| I3 | Egyéb hivatkozások      	| Legyenek hivatkozások a suli honlapjára, Neptun-oldalára, az e-learning-oldalra							|
-| Interface	| I4 | Feladatkiosztó		| A feladatok sablonjait töltsük ki az adatbázisból olvasott adatokkal.									|
-| Datastore 	| D1 | Adattárolási mód 	| Egy adatbázis-táblában eltároljuk a különbözõ tárgyakhoz kapcsolódó feladatok részleteit, ezek megfelelõ helyekre beollózva.		|
-| Datastore 	| D2 | Tervezett karbantartás	| A feladatok adatbázisa félévek kezdete elõtti héten legyen takarítva, lehetõleg inkább egyre bõvebb készlet álljon rendelkezésre.	|
-| Datastore 	| D3 | Adatbázis        	| Tároljuk az adatokat adatbázisban, szerkezete legyen a lehetõ legegyszerûbb, mivel sok feladat részleteit fogunk tárolni. 		|
-| Feature   	| F1 | Rendszeridõ      	| Mutasson rendszeridõt a képernyõ valamely, a munka szempontjából kevésbé zavaró részén.						|
-| Feature   	| F2 | Random adatolvasás      	| Az adatbázisból olvassunk ki véletlenszerûen egy rekordot (egy feladat-csomagot) a tárgynak megfelelõ rekeszekbõl.			|
+| Interface   	| I1 | MenÃ¼sor   		| Ne legyen tÃºlgondolva, a PTI-s tÃ¡rgyak legyenek kilistÃ¡zva, ezekre kattintva Ã¡tvisz a megfelelÅ‘ oldal feladatlistÃ¡jÃ¡ra. 		|
+| Interface	| I2 | FelhasznÃ¡lÃ³i felÃ¼let	| A teljes felhasznÃ¡lÃ³i felÃ¼let legyen leegyszerÅ±sÃ­tett, minimalista.									|
+| Interface 	| I3 | EgyÃ©b hivatkozÃ¡sok      	| Legyenek hivatkozÃ¡sok a suli honlapjÃ¡ra, Neptun-oldalÃ¡ra, az e-learning-oldalra							|
+| Interface	| I4 | FeladatkiosztÃ³		| A feladatok sablonjait tÃ¶ltsÃ¼k ki az adatbÃ¡zisbÃ³l olvasott adatokkal.									|
+| Datastore 	| D1 | AdattÃ¡rolÃ¡si mÃ³d 	| Egy adatbÃ¡zis-tÃ¡blÃ¡ban eltÃ¡roljuk a kÃ¼lÃ¶nbÃ¶zÅ‘ tÃ¡rgyakhoz kapcsolÃ³dÃ³ feladatok rÃ©szleteit, ezek megfelelÅ‘ helyekre beollÃ³zva.		|
+| Datastore 	| D2 | Tervezett karbantartÃ¡s	| A feladatok adatbÃ¡zisa fÃ©lÃ©vek kezdete elÅ‘tti hÃ©ten legyen takarÃ­tva, lehetÅ‘leg inkÃ¡bb egyre bÅ‘vebb kÃ©szlet Ã¡lljon rendelkezÃ©sre.	|
+| Datastore 	| D3 | AdatbÃ¡zis        	| TÃ¡roljuk az adatokat adatbÃ¡zisban, szerkezete legyen a lehetÅ‘ legegyszerÅ±bb, mivel sok feladat rÃ©szleteit fogunk tÃ¡rolni. 		|
+| Feature   	| F1 | RendszeridÅ‘      	| Mutasson rendszeridÅ‘t a kÃ©pernyÅ‘ valamely, a munka szempontjÃ¡bÃ³l kevÃ©sbÃ© zavarÃ³ rÃ©szÃ©n.						|
+| Feature   	| F2 | Random adatolvasÃ¡s      	| Az adatbÃ¡zisbÃ³l olvassunk ki vÃ©letlenszerÅ±en egy rekordot (egy feladat-csomagot) a tÃ¡rgynak megfelelÅ‘ rekeszekbÅ‘l.			|
 
-### Rendszerre vonatkozó törvények
+### Rendszerre vonatkozÃ³ tÃ¶rvÃ©nyek
 
-**Kivonat: 18/2018. (V. 31.) utasítás az Informatikai Biztonsági Szabályzatról**
-	<p>	*171.* 	Az operációs rendszer, az alkalmazás és a hálózati aktív eszköz szoftver verzióját, valamint biztonsági patch szintjét tesztelést követõen lehetõség szerint a gyártói támogatással rendelkezõ, legmagasabb szintre kell hozni.(…) </p>
-	<p>	*177.* 	Meglévõ rendszer esetén a biztonságot közvetlenül veszélyeztetõ hibákat a lehetõ leghamarabb javítani kell, vagy korrektív kontroll alkalmazásával csökkenteni a kockázatokat. Új rendszer esetén feltárt sérülékenységet a használatbavételig javítani kell. </p>
-	<p>	*178.* 	A hálózatok ki- és bemeneteli pontjait minimalizálni kell, továbbá a ki- és bemeneti pontok adatforgalmát elektronikusan naplózni, és a naplófájlokat ellenõrizni kell.</p>
-	<p>	*179.* 	Az informatikai üzemeltetésért felelõs vezetõnek a rendszer minden arra alkalmas – megfelelõ hardver- és szoftverkörnyezettel rendelkezõ – elemére jóváhagyott, központilag rendszeresített vírusellenõrzõ szoftvert kell telepítenie és naprakészen tartania.(…)</p>
-	<p>	*183.* 	A biztonsági mentés célja az információ és az adatfeldolgozó szoftverek épségének és rendelkezésre állásának biztosítása. A hatékony biztonsági adatmentés érdekében a munkaállomásokon feldolgozott adatállományokat tárolni kizárólag szervereken és központi kiszolgálókon, valamint az adatmentésre szolgáló médián lehet. Bármilyen más helyen történõ adattárolás még átmenetileg is tilos.(…)</p>
-	<p>	*200.* 	Tilos a hálózat biztonságos mûködését zavaró vagy veszélyeztetõ információk, programok terjesztése. (…)</p>
-	<p>	*208.* 	A rendszert és a hálózatot túlterheléses – szolgáltatás megtagadás jellegû – támadásokkal szembeni védelemmel kell ellátni.(…)</p>
-	<p>	*222.* 	A fejlesztés során a biztonságos programozás irányelveit kell követni. A szoftverfejlesztés során a szoftver funkcionalitása mellett fokozott figyelmet kell fordítani a rendszer és a kapcsolódó rendszerek biztonsági követelményeinek betartására is.</p>
-	<p>	*forrás: NJT* </p>
+**Kivonat: 18/2018. (V. 31.) utasÃ­tÃ¡s az Informatikai BiztonsÃ¡gi SzabÃ¡lyzatrÃ³l**
+	<p>	*171.* 	Az operÃ¡ciÃ³s rendszer, az alkalmazÃ¡s Ã©s a hÃ¡lÃ³zati aktÃ­v eszkÃ¶z szoftver verziÃ³jÃ¡t, valamint biztonsÃ¡gi patch szintjÃ©t tesztelÃ©st kÃ¶vetÅ‘en lehetÅ‘sÃ©g szerint a gyÃ¡rtÃ³i tÃ¡mogatÃ¡ssal rendelkezÅ‘, legmagasabb szintre kell hozni.(â€¦) </p>
+	<p>	*177.* 	MeglÃ©vÅ‘ rendszer esetÃ©n a biztonsÃ¡got kÃ¶zvetlenÃ¼l veszÃ©lyeztetÅ‘ hibÃ¡kat a lehetÅ‘ leghamarabb javÃ­tani kell, vagy korrektÃ­v kontroll alkalmazÃ¡sÃ¡val csÃ¶kkenteni a kockÃ¡zatokat. Ãšj rendszer esetÃ©n feltÃ¡rt sÃ©rÃ¼lÃ©kenysÃ©get a hasznÃ¡latbavÃ©telig javÃ­tani kell. </p>
+	<p>	*178.* 	A hÃ¡lÃ³zatok ki- Ã©s bemeneteli pontjait minimalizÃ¡lni kell, tovÃ¡bbÃ¡ a ki- Ã©s bemeneti pontok adatforgalmÃ¡t elektronikusan naplÃ³zni, Ã©s a naplÃ³fÃ¡jlokat ellenÅ‘rizni kell.</p>
+	<p>	*179.* 	Az informatikai Ã¼zemeltetÃ©sÃ©rt felelÅ‘s vezetÅ‘nek a rendszer minden arra alkalmas â€“ megfelelÅ‘ hardver- Ã©s szoftverkÃ¶rnyezettel rendelkezÅ‘ â€“ elemÃ©re jÃ³vÃ¡hagyott, kÃ¶zpontilag rendszeresÃ­tett vÃ­rusellenÅ‘rzÅ‘ szoftvert kell telepÃ­tenie Ã©s naprakÃ©szen tartania.(â€¦)</p>
+	<p>	*183.* 	A biztonsÃ¡gi mentÃ©s cÃ©lja az informÃ¡ciÃ³ Ã©s az adatfeldolgozÃ³ szoftverek Ã©psÃ©gÃ©nek Ã©s rendelkezÃ©sre Ã¡llÃ¡sÃ¡nak biztosÃ­tÃ¡sa. A hatÃ©kony biztonsÃ¡gi adatmentÃ©s Ã©rdekÃ©ben a munkaÃ¡llomÃ¡sokon feldolgozott adatÃ¡llomÃ¡nyokat tÃ¡rolni kizÃ¡rÃ³lag szervereken Ã©s kÃ¶zponti kiszolgÃ¡lÃ³kon, valamint az adatmentÃ©sre szolgÃ¡lÃ³ mÃ©diÃ¡n lehet. BÃ¡rmilyen mÃ¡s helyen tÃ¶rtÃ©nÅ‘ adattÃ¡rolÃ¡s mÃ©g Ã¡tmenetileg is tilos.(â€¦)</p>
+	<p>	*200.* 	Tilos a hÃ¡lÃ³zat biztonsÃ¡gos mÅ±kÃ¶dÃ©sÃ©t zavarÃ³ vagy veszÃ©lyeztetÅ‘ informÃ¡ciÃ³k, programok terjesztÃ©se. (â€¦)</p>
+	<p>	*208.* 	A rendszert Ã©s a hÃ¡lÃ³zatot tÃºlterhelÃ©ses â€“ szolgÃ¡ltatÃ¡s megtagadÃ¡s jellegÅ± â€“ tÃ¡madÃ¡sokkal szembeni vÃ©delemmel kell ellÃ¡tni.(â€¦)</p>
+	<p>	*222.* 	A fejlesztÃ©s sorÃ¡n a biztonsÃ¡gos programozÃ¡s irÃ¡nyelveit kell kÃ¶vetni. A szoftverfejlesztÃ©s sorÃ¡n a szoftver funkcionalitÃ¡sa mellett fokozott figyelmet kell fordÃ­tani a rendszer Ã©s a kapcsolÃ³dÃ³ rendszerek biztonsÃ¡gi kÃ¶vetelmÃ©nyeinek betartÃ¡sÃ¡ra is.</p>
+	<p>	*forrÃ¡s: NJT* </p>
 
-#### Szerzõi jogok
-**Kivonat az 1999. évi LXXVI. szerzõi jogi törvénybõl:**
-	<p>*1.§* 	(2) Szerzõi jogi védelem alá tartozik – függetlenül attól, hogy e törvény megnevezi-e – 
-				az irodalom, a tudomány és a mûvészet minden alkotása. Ilyen alkotásnak minõsül különösen: (...)</p>
-			<p>&emsp; &emsp;c) a *számítógépi programalkotás és a hozzá tartozó dokumentáció (a továbbiakban: szoftver) akár forráskódban, akár tárgykódban vagy bármilyen más formában* rögzített minden fajtája, ideértve a felhasználói programot és az operációs rendszert is.(...)</p>
-			<p>&emsp;(3) A szerzõi jogi védelem az alkotást a szerzõ szellemi tevékenységébõl fakadó egyéni, eredeti jellege alapján illeti meg. A védelem nem függ mennyiségi, minõségi, esztétikai jellemzõktõl vagy az alkotás színvonalára vonatkozó értékítélettõl. (...)</p>
-	<p>*4.$* (1) A szerzõi jog *azt illeti, aki a mûvet megalkotta* (szerzõ). </p>
-			<p>&emsp;(2) *Szerzõi jogi védelem* alatt áll – az eredeti mû szerzõjét megilletõ jogok sérelme nélkül – más szerzõ mûvének átdolgozása, feldolgozása vagy fordítása is, ha annak egyéni, eredeti jellege van.(...)</p>
-	<p>*5.§* (1) Több szerzõ közös mûvére, ha annak részei nem használhatók fel önállóan, a szerzõi jog együttesen és – kétség esetén – egyenlõ arányban illeti meg a szerzõtársakat; a szerzõi jog megsértése ellen azonban bármelyik szerzõtárs önállóan is felléphet. (...)</p>
-	<p>*13.§* A szerzõ személyhez fûzõdõ jogát sérti mûvének a becsületére vagy jóhírnevére sérelmes mindenfajta eltorzítása, megcsonkítása, megváltoztatása és a mûvel kapcsolatos más ilyen jellegû visszaélés.(...)</p>
-	<p>*42.§* (1) Felhasználási szerzõdés alapján a szerzõ engedélyt ad mûvének a felhasználására, a felhasználó pedig köteles ennek fejében díjat fizetni. (...)</p>
-	<p>*59.§* (1) Eltérõ megállapodás hiányában a szerzõ kizárólagos joga nem terjed ki a többszörözésre, az átdolgozásra, a feldolgozásra, a fordításra, a szoftver bármely más módosítására – ideértve a hiba kijavítását is –, valamint ezek eredményének többszörözésére annyiban, amennyiben e felhasználási cselekményeket a szoftvert jogszerûen megszerzõ személy a szoftver rendeltetésével összhangban végzi.</p>
-			<p>&emsp;(2) A felhasználási szerzõdésben sem zárható ki, hogy a felhasználó egy biztonsági másolatot készíthessen a szoftverrõl, ha az a felhasználáshoz szükséges.</p>
-			<p>&emsp;(3) Aki a szoftver valamely példányának felhasználására jogosult, a szerzõ engedélye nélkül is megfigyelheti és tanulmányozhatja a szoftver mûködését, továbbá kipróbálhatja a szoftvert annak betáplálása, képernyõn való megjelenítése, futtatása, továbbítása vagy tárolása során abból a célból, hogy a szoftver valamely elemének alapjául szolgáló elgondolást vagy elvet megismerje.</p>
-<p>(Forrás: NJT)</p>
+#### SzerzÅ‘i jogok
+**Kivonat az 1999. Ã©vi LXXVI. szerzÅ‘i jogi tÃ¶rvÃ©nybÅ‘l:**
+	<p>*1.Â§* 	(2) SzerzÅ‘i jogi vÃ©delem alÃ¡ tartozik â€“ fÃ¼ggetlenÃ¼l attÃ³l, hogy e tÃ¶rvÃ©ny megnevezi-e â€“ 
+				az irodalom, a tudomÃ¡ny Ã©s a mÅ±vÃ©szet minden alkotÃ¡sa. Ilyen alkotÃ¡snak minÅ‘sÃ¼l kÃ¼lÃ¶nÃ¶sen: (...)</p>
+			<p>&emsp; &emsp;c) a *szÃ¡mÃ­tÃ³gÃ©pi programalkotÃ¡s Ã©s a hozzÃ¡ tartozÃ³ dokumentÃ¡ciÃ³ (a tovÃ¡bbiakban: szoftver) akÃ¡r forrÃ¡skÃ³dban, akÃ¡r tÃ¡rgykÃ³dban vagy bÃ¡rmilyen mÃ¡s formÃ¡ban* rÃ¶gzÃ­tett minden fajtÃ¡ja, ideÃ©rtve a felhasznÃ¡lÃ³i programot Ã©s az operÃ¡ciÃ³s rendszert is.(...)</p>
+			<p>&emsp;(3) A szerzÅ‘i jogi vÃ©delem az alkotÃ¡st a szerzÅ‘ szellemi tevÃ©kenysÃ©gÃ©bÅ‘l fakadÃ³ egyÃ©ni, eredeti jellege alapjÃ¡n illeti meg. A vÃ©delem nem fÃ¼gg mennyisÃ©gi, minÅ‘sÃ©gi, esztÃ©tikai jellemzÅ‘ktÅ‘l vagy az alkotÃ¡s szÃ­nvonalÃ¡ra vonatkozÃ³ Ã©rtÃ©kÃ­tÃ©lettÅ‘l. (...)</p>
+	<p>*4.$* (1) A szerzÅ‘i jog *azt illeti, aki a mÅ±vet megalkotta* (szerzÅ‘). </p>
+			<p>&emsp;(2) *SzerzÅ‘i jogi vÃ©delem* alatt Ã¡ll â€“ az eredeti mÅ± szerzÅ‘jÃ©t megilletÅ‘ jogok sÃ©relme nÃ©lkÃ¼l â€“ mÃ¡s szerzÅ‘ mÅ±vÃ©nek Ã¡tdolgozÃ¡sa, feldolgozÃ¡sa vagy fordÃ­tÃ¡sa is, ha annak egyÃ©ni, eredeti jellege van.(...)</p>
+	<p>*5.Â§* (1) TÃ¶bb szerzÅ‘ kÃ¶zÃ¶s mÅ±vÃ©re, ha annak rÃ©szei nem hasznÃ¡lhatÃ³k fel Ã¶nÃ¡llÃ³an, a szerzÅ‘i jog egyÃ¼ttesen Ã©s â€“ kÃ©tsÃ©g esetÃ©n â€“ egyenlÅ‘ arÃ¡nyban illeti meg a szerzÅ‘tÃ¡rsakat; a szerzÅ‘i jog megsÃ©rtÃ©se ellen azonban bÃ¡rmelyik szerzÅ‘tÃ¡rs Ã¶nÃ¡llÃ³an is fellÃ©phet. (...)</p>
+	<p>*13.Â§* A szerzÅ‘ szemÃ©lyhez fÅ±zÅ‘dÅ‘ jogÃ¡t sÃ©rti mÅ±vÃ©nek a becsÃ¼letÃ©re vagy jÃ³hÃ­rnevÃ©re sÃ©relmes mindenfajta eltorzÃ­tÃ¡sa, megcsonkÃ­tÃ¡sa, megvÃ¡ltoztatÃ¡sa Ã©s a mÅ±vel kapcsolatos mÃ¡s ilyen jellegÅ± visszaÃ©lÃ©s.(...)</p>
+	<p>*42.Â§* (1) FelhasznÃ¡lÃ¡si szerzÅ‘dÃ©s alapjÃ¡n a szerzÅ‘ engedÃ©lyt ad mÅ±vÃ©nek a felhasznÃ¡lÃ¡sÃ¡ra, a felhasznÃ¡lÃ³ pedig kÃ¶teles ennek fejÃ©ben dÃ­jat fizetni. (...)</p>
+	<p>*59.Â§* (1) EltÃ©rÅ‘ megÃ¡llapodÃ¡s hiÃ¡nyÃ¡ban a szerzÅ‘ kizÃ¡rÃ³lagos joga nem terjed ki a tÃ¶bbszÃ¶rÃ¶zÃ©sre, az Ã¡tdolgozÃ¡sra, a feldolgozÃ¡sra, a fordÃ­tÃ¡sra, a szoftver bÃ¡rmely mÃ¡s mÃ³dosÃ­tÃ¡sÃ¡ra â€“ ideÃ©rtve a hiba kijavÃ­tÃ¡sÃ¡t is â€“, valamint ezek eredmÃ©nyÃ©nek tÃ¶bbszÃ¶rÃ¶zÃ©sÃ©re annyiban, amennyiben e felhasznÃ¡lÃ¡si cselekmÃ©nyeket a szoftvert jogszerÅ±en megszerzÅ‘ szemÃ©ly a szoftver rendeltetÃ©sÃ©vel Ã¶sszhangban vÃ©gzi.</p>
+			<p>&emsp;(2) A felhasznÃ¡lÃ¡si szerzÅ‘dÃ©sben sem zÃ¡rhatÃ³ ki, hogy a felhasznÃ¡lÃ³ egy biztonsÃ¡gi mÃ¡solatot kÃ©szÃ­thessen a szoftverrÅ‘l, ha az a felhasznÃ¡lÃ¡shoz szÃ¼ksÃ©ges.</p>
+			<p>&emsp;(3) Aki a szoftver valamely pÃ©ldÃ¡nyÃ¡nak felhasznÃ¡lÃ¡sÃ¡ra jogosult, a szerzÅ‘ engedÃ©lye nÃ©lkÃ¼l is megfigyelheti Ã©s tanulmÃ¡nyozhatja a szoftver mÅ±kÃ¶dÃ©sÃ©t, tovÃ¡bbÃ¡ kiprÃ³bÃ¡lhatja a szoftvert annak betÃ¡plÃ¡lÃ¡sa, kÃ©pernyÅ‘n valÃ³ megjelenÃ­tÃ©se, futtatÃ¡sa, tovÃ¡bbÃ­tÃ¡sa vagy tÃ¡rolÃ¡sa sorÃ¡n abbÃ³l a cÃ©lbÃ³l, hogy a szoftver valamely elemÃ©nek alapjÃ¡ul szolgÃ¡lÃ³ elgondolÃ¡st vagy elvet megismerje.</p>
+<p>(ForrÃ¡s: NJT)</p>
 
-### Általános Információk
+### ÃltalÃ¡nos InformÃ¡ciÃ³k
 
-Az Alkalmazásnak a használatát és a hozzáférését megelõzi az alkalmazandó jogszabályok és a jelen Felhasználási Feltételek
-és Adatkezelési tájékoztatóknak az elolvasása és értelmezése. Amennyiben az alkalmazást letöltõk vagy használók (a késõbbiekben: a Felhasználók)
-elfogadják és teljesítik az imént említett Felhasználási Feltételeket abban az esetben az alkalmazás használata engedélyezett. Amennyiben ezen
-Adatkezelési Tájékoztatót és a Felhasználói Feltételek nem fogadják el, abban az esetben a Felhasználó nem jogosult arra hogy az alkalmazást használhassa.
+Az AlkalmazÃ¡snak a hasznÃ¡latÃ¡t Ã©s a hozzÃ¡fÃ©rÃ©sÃ©t megelÅ‘zi az alkalmazandÃ³ jogszabÃ¡lyok Ã©s a jelen FelhasznÃ¡lÃ¡si FeltÃ©telek
+Ã©s AdatkezelÃ©si tÃ¡jÃ©koztatÃ³knak az elolvasÃ¡sa Ã©s Ã©rtelmezÃ©se. Amennyiben az alkalmazÃ¡st letÃ¶ltÅ‘k vagy hasznÃ¡lÃ³k (a kÃ©sÅ‘bbiekben: a FelhasznÃ¡lÃ³k)
+elfogadjÃ¡k Ã©s teljesÃ­tik az imÃ©nt emlÃ­tett FelhasznÃ¡lÃ¡si FeltÃ©teleket abban az esetben az alkalmazÃ¡s hasznÃ¡lata engedÃ©lyezett. Amennyiben ezen
+AdatkezelÃ©si TÃ¡jÃ©koztatÃ³t Ã©s a FelhasznÃ¡lÃ³i FeltÃ©telek nem fogadjÃ¡k el, abban az esetben a FelhasznÃ¡lÃ³ nem jogosult arra hogy az alkalmazÃ¡st hasznÃ¡lhassa.
 
-A jelenlegi Felhasználási Feltételekre a magyar jog az irányadó, tekintet nélkül a nemzetközi magánjog elõírásaira. Az Alkalmazás Felhasználói
-kifejezetten hozzájárulnak ahhoz, hogy a jogvitákra a magyar hatóságoknak és bíróságoknak legyen kizárólags joghatóságuk a magyar jog alapján.
+A jelenlegi FelhasznÃ¡lÃ¡si FeltÃ©telekre a magyar jog az irÃ¡nyadÃ³, tekintet nÃ©lkÃ¼l a nemzetkÃ¶zi magÃ¡njog elÅ‘Ã­rÃ¡saira. Az AlkalmazÃ¡s FelhasznÃ¡lÃ³i
+kifejezetten hozzÃ¡jÃ¡rulnak ahhoz, hogy a jogvitÃ¡kra a magyar hatÃ³sÃ¡goknak Ã©s bÃ­rÃ³sÃ¡goknak legyen kizÃ¡rÃ³lags joghatÃ³sÃ¡guk a magyar jog alapjÃ¡n.
 
 ### Szellemi tulajdon
 
-Az Alkalmazás és valamennyi kapcsolódó védjegy, szerzõi jogi alkotás és egyéb - akár bejegyzett, akár be nem jegyzett - szellemi tulajdon
-(a továbbiakban együttesen: Szellemi Tulajdon) tulajdonosa az EKE és/vagy EKE Szolgáltató, valamint az alkalmazáshoz kedvezményt nyújtó
-partnerek. A Felhasználók az Alkalmazást a Szellemi Tulajdon maximális tiszteletben tartásával jogosultak használni. 
+Az AlkalmazÃ¡s Ã©s valamennyi kapcsolÃ³dÃ³ vÃ©djegy, szerzÅ‘i jogi alkotÃ¡s Ã©s egyÃ©b - akÃ¡r bejegyzett, akÃ¡r be nem jegyzett - szellemi tulajdon
+(a tovÃ¡bbiakban egyÃ¼ttesen: Szellemi Tulajdon) tulajdonosa az EKE Ã©s/vagy EKE SzolgÃ¡ltatÃ³, valamint az alkalmazÃ¡shoz kedvezmÃ©nyt nyÃºjtÃ³
+partnerek. A FelhasznÃ¡lÃ³k az AlkalmazÃ¡st a Szellemi Tulajdon maximÃ¡lis tiszteletben tartÃ¡sÃ¡val jogosultak hasznÃ¡lni. 
 
-A Szellemi Tulajdon kiterjed különösen, de nem kizárólagosan valamennyi szoftverre, logóra, márkajelre, márkanévre, fényképre, szövegre, grafikára, adatbázisra.
-A Szellemi Tulajdonnak tilos bárminemû megsértése, bitorlása, másolása, átdolgozása és tilos azt bármilyen egyéb módon megsérteni,
-azt jogosulatlanul felhasználni, továbbadni, megterhelni, azzal bármilyen módon rendelkezni, visszaélni. 
+A Szellemi Tulajdon kiterjed kÃ¼lÃ¶nÃ¶sen, de nem kizÃ¡rÃ³lagosan valamennyi szoftverre, logÃ³ra, mÃ¡rkajelre, mÃ¡rkanÃ©vre, fÃ©nykÃ©pre, szÃ¶vegre, grafikÃ¡ra, adatbÃ¡zisra.
+A Szellemi Tulajdonnak tilos bÃ¡rminemÅ± megsÃ©rtÃ©se, bitorlÃ¡sa, mÃ¡solÃ¡sa, Ã¡tdolgozÃ¡sa Ã©s tilos azt bÃ¡rmilyen egyÃ©b mÃ³don megsÃ©rteni,
+azt jogosulatlanul felhasznÃ¡lni, tovÃ¡bbadni, megterhelni, azzal bÃ¡rmilyen mÃ³don rendelkezni, visszaÃ©lni. 
 
-Ezen szabályok megsértése az Alkalmazás használati lehetõségeinek azonnali hatályú megszüntetése mellett a megfelelõ jogi lépések megtételét
-– beleértve esetleges büntetõjogi lépések megtételét is – vonja maga után a Felhasználóval, más jogsértõ személlyel szemben a Tulajdonos és/vagy a 
-Szellemi Tulajdon egyéb jogosultjai által.
-
-
-### Használat
+Ezen szabÃ¡lyok megsÃ©rtÃ©se az AlkalmazÃ¡s hasznÃ¡lati lehetÅ‘sÃ©geinek azonnali hatÃ¡lyÃº megszÃ¼ntetÃ©se mellett a megfelelÅ‘ jogi lÃ©pÃ©sek megtÃ©telÃ©t
+â€“ beleÃ©rtve esetleges bÃ¼ntetÅ‘jogi lÃ©pÃ©sek megtÃ©telÃ©t is â€“ vonja maga utÃ¡n a FelhasznÃ¡lÃ³val, mÃ¡s jogsÃ©rtÅ‘ szemÃ©llyel szemben a Tulajdonos Ã©s/vagy a 
+Szellemi Tulajdon egyÃ©b jogosultjai Ã¡ltal.
 
 
-
-### Felelõsségi szabályok
-
-Az Alkalmazáshoz kapcsolódó adatbázis módosítása kizárólag az Üzemeltetõ által, illetve az Alkalmazást üzemeltetõ webkiszolgálón keresztül
-lehetséges. Bármilyen külsõ, nem az Alkalmazás részeként elérhetõ eszközzel történõ beavatkozás a Felhasználó azonnali kizárását eredményezi.
-
-Ha a Felhasználó az Alkalmazást használat közben bezárja, vagy ha a kapcsolat (bármely okból) megszakad a kiszolgáló webhelyével,
-abban az esetben az adatok elvesztéséért a Tulajdonos semmilyen felelõsséget nem vállal. A Tulajdonos és az Üzemeltetõ a rendelkezésére álló
-eszközökkel biztosítja, hogy az Alkalmazás használata technikai szempontból biztonságosnak minõsüljön.
-
-Az Alkalmazáshoz való csatlakozás miatt bekövetkezõ károkért, az internetes hálózat esetleges üzemkimaradásából, 
-az elérési út hibájából, bármely nem várt technikai hibából eredõ adatvesztésért, vírusból, vagy más károkért a Tulajdonos nem felelõs. 
-A Felhasználóknak minden esetben fel kell mérniük, hogy rendelkeznek-e az Alkalmazás használatához szükséges ismeretekkel, 
-technikai követelményekkel és teljesítményekkel.
-A Tulajdonos fenntartja magának a jogot arra, hogy amennyiben valamely Felhasználó részérõl bármilyen manipulációt, tömegesen generált letöltést,
-illetve az Alkalmazás szellemével bármilyen módon összeférhetetlen vagy azt sértõ magatartást tapasztal, 
-vagy ennek megalapozott gyanúja felmerül, úgy a Felhasználót azonnali hatállyal kizárja az Alkalmazás felhasználói körébõl.
+### HasznÃ¡lat
 
 
 
-### Technikai követelmények
-Az Alkalmazás használatához szükséges technikai feltételek: Windows 10 operációs rendszer valamint minimum 400 MB szabad tárhely. 
-A technikai feltételeket az Alkalmazás letöltéséhez és használatához a Felhasználónak kell teljesítenie. A technikai feltételek nem teljesüléséért a Tulajdonos nem vonható felelõsségre.
-Ugyanígy nem vonható felelõsségre a Tulajdonos az Alkalmazás használatából a készüléken bekövetkezõ adatvesztésért, meghibásodásért. 
-A Tulajdonos kizár minden kártérítési felelõsséget az Alkalmazáshoz csatlakozó minden külsõ szerver által nyújtott
-vagy megjelenített adattal, információval kapcsolatban is.
+### FelelÅ‘ssÃ©gi szabÃ¡lyok
 
-Az Alkalmazás telepítéssel vehetõ használatba.
+Az AlkalmazÃ¡shoz kapcsolÃ³dÃ³ adatbÃ¡zis mÃ³dosÃ­tÃ¡sa kizÃ¡rÃ³lag az ÃœzemeltetÅ‘ Ã¡ltal, illetve az AlkalmazÃ¡st Ã¼zemeltetÅ‘ webkiszolgÃ¡lÃ³n keresztÃ¼l
+lehetsÃ©ges. BÃ¡rmilyen kÃ¼lsÅ‘, nem az AlkalmazÃ¡s rÃ©szekÃ©nt elÃ©rhetÅ‘ eszkÃ¶zzel tÃ¶rtÃ©nÅ‘ beavatkozÃ¡s a FelhasznÃ¡lÃ³ azonnali kizÃ¡rÃ¡sÃ¡t eredmÃ©nyezi.
+
+Ha a FelhasznÃ¡lÃ³ az AlkalmazÃ¡st hasznÃ¡lat kÃ¶zben bezÃ¡rja, vagy ha a kapcsolat (bÃ¡rmely okbÃ³l) megszakad a kiszolgÃ¡lÃ³ webhelyÃ©vel,
+abban az esetben az adatok elvesztÃ©sÃ©Ã©rt a Tulajdonos semmilyen felelÅ‘ssÃ©get nem vÃ¡llal. A Tulajdonos Ã©s az ÃœzemeltetÅ‘ a rendelkezÃ©sÃ©re Ã¡llÃ³
+eszkÃ¶zÃ¶kkel biztosÃ­tja, hogy az AlkalmazÃ¡s hasznÃ¡lata technikai szempontbÃ³l biztonsÃ¡gosnak minÅ‘sÃ¼ljÃ¶n.
+
+Az AlkalmazÃ¡shoz valÃ³ csatlakozÃ¡s miatt bekÃ¶vetkezÅ‘ kÃ¡rokÃ©rt, az internetes hÃ¡lÃ³zat esetleges Ã¼zemkimaradÃ¡sÃ¡bÃ³l, 
+az elÃ©rÃ©si Ãºt hibÃ¡jÃ¡bÃ³l, bÃ¡rmely nem vÃ¡rt technikai hibÃ¡bÃ³l eredÅ‘ adatvesztÃ©sÃ©rt, vÃ­rusbÃ³l, vagy mÃ¡s kÃ¡rokÃ©rt a Tulajdonos nem felelÅ‘s. 
+A FelhasznÃ¡lÃ³knak minden esetben fel kell mÃ©rniÃ¼k, hogy rendelkeznek-e az AlkalmazÃ¡s hasznÃ¡latÃ¡hoz szÃ¼ksÃ©ges ismeretekkel, 
+technikai kÃ¶vetelmÃ©nyekkel Ã©s teljesÃ­tmÃ©nyekkel.
+A Tulajdonos fenntartja magÃ¡nak a jogot arra, hogy amennyiben valamely FelhasznÃ¡lÃ³ rÃ©szÃ©rÅ‘l bÃ¡rmilyen manipulÃ¡ciÃ³t, tÃ¶megesen generÃ¡lt letÃ¶ltÃ©st,
+illetve az AlkalmazÃ¡s szellemÃ©vel bÃ¡rmilyen mÃ³don Ã¶sszefÃ©rhetetlen vagy azt sÃ©rtÅ‘ magatartÃ¡st tapasztal, 
+vagy ennek megalapozott gyanÃºja felmerÃ¼l, Ãºgy a FelhasznÃ¡lÃ³t azonnali hatÃ¡llyal kizÃ¡rja az AlkalmazÃ¡s felhasznÃ¡lÃ³i kÃ¶rÃ©bÅ‘l.
 
 
-### Garancia és kártérítés
 
-Az Alkalmazás használatához a felhasználói oldalon szükséges – fent meghatározott vagy bármely egyéb - technikai feltételeket a Felhasználónak kell biztosítania, teljesítenie.
-Ezen technikai feltételek nem teljesüléséért a Tulajdonos nem vonható felelõsségre. Ugyanígy nem vonható felelõsségre a Tulajdonos az Alkalmazás használatából adódóan, 
-a készüléken bekövetkezõ adatvesztésért, meghibásodásért. A Tulajdonos kizár minden kártérítési felelõsséget az Alkalmazáshoz csatlakozó minden külsõ szoftver által nyújtott
-vagy megjelenített adattal, információval kapcsolatban. A Tulajdonos nem vállal garanciát az Alkalmazás megszakításmentes mûködéséért, 
-valamint vis major hibákért. Az ebbõl eredõ adatvesztésért, tartalom vesztésért a Tulajdonos szintén nem tartozik kártérítési felelõsséggel.
+### Technikai kÃ¶vetelmÃ©nyek
+Az AlkalmazÃ¡s hasznÃ¡latÃ¡hoz szÃ¼ksÃ©ges technikai feltÃ©telek: Windows 10 operÃ¡ciÃ³s rendszer valamint minimum 400 MB szabad tÃ¡rhely. 
+A technikai feltÃ©teleket az AlkalmazÃ¡s letÃ¶ltÃ©sÃ©hez Ã©s hasznÃ¡latÃ¡hoz a FelhasznÃ¡lÃ³nak kell teljesÃ­tenie. A technikai feltÃ©telek nem teljesÃ¼lÃ©sÃ©Ã©rt a Tulajdonos nem vonhatÃ³ felelÅ‘ssÃ©gre.
+UgyanÃ­gy nem vonhatÃ³ felelÅ‘ssÃ©gre a Tulajdonos az AlkalmazÃ¡s hasznÃ¡latÃ¡bÃ³l a kÃ©szÃ¼lÃ©ken bekÃ¶vetkezÅ‘ adatvesztÃ©sÃ©rt, meghibÃ¡sodÃ¡sÃ©rt. 
+A Tulajdonos kizÃ¡r minden kÃ¡rtÃ©rÃ­tÃ©si felelÅ‘ssÃ©get az AlkalmazÃ¡shoz csatlakozÃ³ minden kÃ¼lsÅ‘ szerver Ã¡ltal nyÃºjtott
+vagy megjelenÃ­tett adattal, informÃ¡ciÃ³val kapcsolatban is.
+
+Az AlkalmazÃ¡s telepÃ­tÃ©ssel vehetÅ‘ hasznÃ¡latba.
 
 
-### Egyéb rendelkezések
+### Garancia Ã©s kÃ¡rtÃ©rÃ­tÃ©s
 
-Jelen Felhasználási Feltételekben nem szabályozott kérdésekben a hatályos jogszabályok – különösen,
-de nem kizárólagosan a Polgári Törvénykönyvrõl szóló 2013. évi V. törvény, az Európai Parlament és Tanács 2016. április 27-i (EU) 2016/679 Rendelete
-a természetes személyeknek a személyes adatok kezelése tekintetében történõ védelmérõl és az ilyen adatok szabad áramlásáról, valamint a 95/46/EK 
-irányelv hatályon kívül helyezésérõl, az információs önrendelkezési jogról és az információ szabadságról szóló 2011. évi CXII. törvény, a szerzõi jogról
-szóló 1999. évi LXXVI. törvény, valamint az elektronikus kereskedelmi szolgáltatások, valamint az információs társadalommal összefüggõ szolgáltatások
-egyes kérdéseirõl szóló 2001. évi CVIII. törvény – rendelkezései az irányadóak.
+Az AlkalmazÃ¡s hasznÃ¡latÃ¡hoz a felhasznÃ¡lÃ³i oldalon szÃ¼ksÃ©ges â€“ fent meghatÃ¡rozott vagy bÃ¡rmely egyÃ©b - technikai feltÃ©teleket a FelhasznÃ¡lÃ³nak kell biztosÃ­tania, teljesÃ­tenie.
+Ezen technikai feltÃ©telek nem teljesÃ¼lÃ©sÃ©Ã©rt a Tulajdonos nem vonhatÃ³ felelÅ‘ssÃ©gre. UgyanÃ­gy nem vonhatÃ³ felelÅ‘ssÃ©gre a Tulajdonos az AlkalmazÃ¡s hasznÃ¡latÃ¡bÃ³l adÃ³dÃ³an, 
+a kÃ©szÃ¼lÃ©ken bekÃ¶vetkezÅ‘ adatvesztÃ©sÃ©rt, meghibÃ¡sodÃ¡sÃ©rt. A Tulajdonos kizÃ¡r minden kÃ¡rtÃ©rÃ­tÃ©si felelÅ‘ssÃ©get az AlkalmazÃ¡shoz csatlakozÃ³ minden kÃ¼lsÅ‘ szoftver Ã¡ltal nyÃºjtott
+vagy megjelenÃ­tett adattal, informÃ¡ciÃ³val kapcsolatban. A Tulajdonos nem vÃ¡llal garanciÃ¡t az AlkalmazÃ¡s megszakÃ­tÃ¡smentes mÅ±kÃ¶dÃ©sÃ©Ã©rt, 
+valamint vis major hibÃ¡kÃ©rt. Az ebbÅ‘l eredÅ‘ adatvesztÃ©sÃ©rt, tartalom vesztÃ©sÃ©rt a Tulajdonos szintÃ©n nem tartozik kÃ¡rtÃ©rÃ­tÃ©si felelÅ‘ssÃ©ggel.
+
+
+### EgyÃ©b rendelkezÃ©sek
+
+Jelen FelhasznÃ¡lÃ¡si FeltÃ©telekben nem szabÃ¡lyozott kÃ©rdÃ©sekben a hatÃ¡lyos jogszabÃ¡lyok â€“ kÃ¼lÃ¶nÃ¶sen,
+de nem kizÃ¡rÃ³lagosan a PolgÃ¡ri TÃ¶rvÃ©nykÃ¶nyvrÅ‘l szÃ³lÃ³ 2013. Ã©vi V. tÃ¶rvÃ©ny, az EurÃ³pai Parlament Ã©s TanÃ¡cs 2016. Ã¡prilis 27-i (EU) 2016/679 Rendelete
+a termÃ©szetes szemÃ©lyeknek a szemÃ©lyes adatok kezelÃ©se tekintetÃ©ben tÃ¶rtÃ©nÅ‘ vÃ©delmÃ©rÅ‘l Ã©s az ilyen adatok szabad Ã¡ramlÃ¡sÃ¡rÃ³l, valamint a 95/46/EK 
+irÃ¡nyelv hatÃ¡lyon kÃ­vÃ¼l helyezÃ©sÃ©rÅ‘l, az informÃ¡ciÃ³s Ã¶nrendelkezÃ©si jogrÃ³l Ã©s az informÃ¡ciÃ³ szabadsÃ¡grÃ³l szÃ³lÃ³ 2011. Ã©vi CXII. tÃ¶rvÃ©ny, a szerzÅ‘i jogrÃ³l
+szÃ³lÃ³ 1999. Ã©vi LXXVI. tÃ¶rvÃ©ny, valamint az elektronikus kereskedelmi szolgÃ¡ltatÃ¡sok, valamint az informÃ¡ciÃ³s tÃ¡rsadalommal Ã¶sszefÃ¼ggÅ‘ szolgÃ¡ltatÃ¡sok
+egyes kÃ©rdÃ©seirÅ‘l szÃ³lÃ³ 2001. Ã©vi CVIII. tÃ¶rvÃ©ny â€“ rendelkezÃ©sei az irÃ¡nyadÃ³ak.
 
 ### Kapcsolat
 
-Az Alkalmazás hosszútávú, megfelelõ mûködéséhez a szoftver üzemeltetését és támogatását a Fenntartó végzi munkanapokon, 8:00 és 16:00 között
-Az Alkalmazás mûködésével kapcsolatban a fejlesztõk közösen ezen célra fenntartott e-mail címére
-(továbbiakban: *NTBSLHK@gmail.com*) várjuk a szolgáltatással kapcsolatosan felmerülõ kérdéseit, tapasztalatait.
-A Fenntartó igyekszik a fentebb említett idõszakban a kérdéseket kielégítõen megválaszolni.
-A változtatás joga és lehetõsége fejlesztés révén abszolút módon fennáll.
+Az AlkalmazÃ¡s hosszÃºtÃ¡vÃº, megfelelÅ‘ mÅ±kÃ¶dÃ©sÃ©hez a szoftver Ã¼zemeltetÃ©sÃ©t Ã©s tÃ¡mogatÃ¡sÃ¡t a FenntartÃ³ vÃ©gzi munkanapokon, 8:00 Ã©s 16:00 kÃ¶zÃ¶tt
+Az AlkalmazÃ¡s mÅ±kÃ¶dÃ©sÃ©vel kapcsolatban a fejlesztÅ‘k kÃ¶zÃ¶sen ezen cÃ©lra fenntartott e-mail cÃ­mÃ©re
+(tovÃ¡bbiakban: *NTBSLHK@gmail.com*) vÃ¡rjuk a szolgÃ¡ltatÃ¡ssal kapcsolatosan felmerÃ¼lÅ‘ kÃ©rdÃ©seit, tapasztalatait.
+A FenntartÃ³ igyekszik a fentebb emlÃ­tett idÅ‘szakban a kÃ©rdÃ©seket kielÃ©gÃ­tÅ‘en megvÃ¡laszolni.
+A vÃ¡ltoztatÃ¡s joga Ã©s lehetÅ‘sÃ©ge fejlesztÃ©s rÃ©vÃ©n abszolÃºt mÃ³don fennÃ¡ll.
 
-### Jelenlegi üzleti folyamatok
+### Jelenlegi Ã¼zleti folyamatok
 
-Jelenlegi helyzetünk, nevezetesen a járványhelyzet valamint a korábbi oktatási modellek hiányosságai
-újabb digitalizációs lépésekre sarkallják a felsõoktatási szférát is. Ezen információ értelmében szükségeltetik
-egy olyan webhely felépítése, amelyen keresztül biztosítjuk a hallgatók a gyakorlatokhoz elvárt, 
-megfelelõ szintû és nyelvezetû tananyaghoz, továbbá a gyakorlatban felmerülõ feladatokhoz való hozzáférését.
-A megrendelõ fontosnak tartja továbbá, hogy a diákok visszajelzéseket kapjanak a feladatokhoz csatolt megoldásaikhoz.
+Jelenlegi helyzetÃ¼nk, nevezetesen a jÃ¡rvÃ¡nyhelyzet valamint a korÃ¡bbi oktatÃ¡si modellek hiÃ¡nyossÃ¡gai
+Ãºjabb digitalizÃ¡ciÃ³s lÃ©pÃ©sekre sarkalljÃ¡k a felsÅ‘oktatÃ¡si szfÃ©rÃ¡t is. Ezen informÃ¡ciÃ³ Ã©rtelmÃ©ben szÃ¼ksÃ©geltetik
+egy olyan webhely felÃ©pÃ­tÃ©se, amelyen keresztÃ¼l biztosÃ­tjuk a hallgatÃ³k a gyakorlatokhoz elvÃ¡rt, 
+megfelelÅ‘ szintÅ± Ã©s nyelvezetÅ± tananyaghoz, tovÃ¡bbÃ¡ a gyakorlatban felmerÃ¼lÅ‘ feladatokhoz valÃ³ hozzÃ¡fÃ©rÃ©sÃ©t.
+A megrendelÅ‘ fontosnak tartja tovÃ¡bbÃ¡, hogy a diÃ¡kok visszajelzÃ©seket kapjanak a feladatokhoz csatolt megoldÃ¡saikhoz.
 
-### Igényelt üzleti folyamatok
+### IgÃ©nyelt Ã¼zleti folyamatok
 
-Fent említett okokból következõen cégünknek is haladnia kell jelen korunk egyre növekvõ elvárásaival, 
-és ezáltal szükséges lépéssé vált egy jól funkcionáló feladatkiosztó rendszer kiépítése.
-Ezalatt egy online webes felületet értünk, amelynek segítségével lehetõséget kapnak 
-az intézmény tanárai egy szerveren tárolt adatbázisba kigyûjteni a hallgatóknak szánt feladatok részleteit.
+Fent emlÃ­tett okokbÃ³l kÃ¶vetkezÅ‘en cÃ©gÃ¼nknek is haladnia kell jelen korunk egyre nÃ¶vekvÅ‘ elvÃ¡rÃ¡saival, 
+Ã©s ezÃ¡ltal szÃ¼ksÃ©ges lÃ©pÃ©ssÃ© vÃ¡lt egy jÃ³l funkcionÃ¡lÃ³ feladatkiosztÃ³ rendszer kiÃ©pÃ­tÃ©se.
+Ezalatt egy online webes felÃ¼letet Ã©rtÃ¼nk, amelynek segÃ­tsÃ©gÃ©vel lehetÅ‘sÃ©get kapnak 
+az intÃ©zmÃ©ny tanÃ¡rai egy szerveren tÃ¡rolt adatbÃ¡zisba kigyÅ±jteni a hallgatÃ³knak szÃ¡nt feladatok rÃ©szleteit.
 
-### Fogalomtár
-	- Grafikus felhasználói felület - GUI: a számítógép és ember közti kapcsolatot megvalósító elemek összessége. 
-	- weboldal: gyakorlatilag az interneten található, hipertext dokumentum, amelyet valamilyen böngészõprogrammal lehet megjeleníteni. Tartalmaz különbözõ objektumokat: képeket, szöveget, táblázatokat, hivatkozásokat más weboldalakra stb. 
-	A webböngészõ ezen adathalmazra fogalmaz meg egy úgynevezett HTTP-GET-kérést, ami azt eredményezi, hogy a böngészõ felületén megjelenik a lekérdezett weboldal a leírónyelvû dokumentum (html - css) alapján megfelelõen formázva.
-	- adatbázis: azonos minõségû, megfelelõen strukturált diszkrét adatok összessége, amelyet egy azok tárolására, lekérdezésére és módosítására különbözõ adatbázis-kezelõ szoftvereket használunk. 
-	Célja az adatok megbízható, perzisztens tárolása és viszonylag/kellõen gyors lekérdezhetõségének biztosítása.
+### FogalomtÃ¡r
+	- Grafikus felhasznÃ¡lÃ³i felÃ¼let - GUI: a szÃ¡mÃ­tÃ³gÃ©p Ã©s ember kÃ¶zti kapcsolatot megvalÃ³sÃ­tÃ³ elemek Ã¶sszessÃ©ge. 
+	- weboldal: gyakorlatilag az interneten talÃ¡lhatÃ³, hipertext dokumentum, amelyet valamilyen bÃ¶ngÃ©szÅ‘programmal lehet megjelenÃ­teni. Tartalmaz kÃ¼lÃ¶nbÃ¶zÅ‘ objektumokat: kÃ©peket, szÃ¶veget, tÃ¡blÃ¡zatokat, hivatkozÃ¡sokat mÃ¡s weboldalakra stb. 
+	A webbÃ¶ngÃ©szÅ‘ ezen adathalmazra fogalmaz meg egy Ãºgynevezett HTTP-GET-kÃ©rÃ©st, ami azt eredmÃ©nyezi, hogy a bÃ¶ngÃ©szÅ‘ felÃ¼letÃ©n megjelenik a lekÃ©rdezett weboldal a leÃ­rÃ³nyelvÅ± dokumentum (html - css) alapjÃ¡n megfelelÅ‘en formÃ¡zva.
+	- adatbÃ¡zis: azonos minÅ‘sÃ©gÅ±, megfelelÅ‘en strukturÃ¡lt diszkrÃ©t adatok Ã¶sszessÃ©ge, amelyet egy azok tÃ¡rolÃ¡sÃ¡ra, lekÃ©rdezÃ©sÃ©re Ã©s mÃ³dosÃ­tÃ¡sÃ¡ra kÃ¼lÃ¶nbÃ¶zÅ‘ adatbÃ¡zis-kezelÅ‘ szoftvereket hasznÃ¡lunk. 
+	CÃ©lja az adatok megbÃ­zhatÃ³, perzisztens tÃ¡rolÃ¡sa Ã©s viszonylag/kellÅ‘en gyors lekÃ©rdezhetÅ‘sÃ©gÃ©nek biztosÃ­tÃ¡sa.
+	
