@@ -2,11 +2,11 @@
 
 ### Áttekintés
 
-
+###TODO
 
 ### Jelenlegi helyzet
 
-
+###TODO
 
 ### Vágyálomrendszer
 
@@ -20,6 +20,7 @@
 
 ### Elvárások
 
+###TODO
 
 ## Követelménylista
 
@@ -91,7 +92,7 @@ Szellemi Tulajdon egyéb jogosultjai által.
 
 ### Használat
 
-
+###TODO
 
 ### Felelősségi szabályok
 
