@@ -1,3 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import redirect, render
+from . models import Subject
 
-# Create your views here.
+def mainPage(request):
+    subjects = Subject.objects.all() # összes adatot lekérjük (Select *)
+    
+    return render(request, 'main.html',{'subjects_names':subjects})
