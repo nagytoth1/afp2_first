@@ -7,7 +7,7 @@ import django.db.models.deletion
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('Edist_Site', '0001_initial'),
+        ('edist_site', '0001_initial'),
     ]
 
     operations = [
@@ -17,7 +17,7 @@ class Migration(migrations.Migration):
                 ('id', models.BigAutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('description', models.TextField()),
                 ('difficulty', models.SmallIntegerField()),
-                ('subject', models.ForeignKey(default=None, on_delete=django.db.models.deletion.DO_NOTHING, related_name='subject', to='Edist_Site.subject')),
+                ('subject', models.ForeignKey(default=None, on_delete=django.db.models.deletion.DO_NOTHING, related_name='subject', to='edist_site.subject')),
             ],
         ),
     ]
