@@ -20,7 +20,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'edist_site.apps.EdistConfig',
+    'thanatos_site.apps.ThanatosConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -39,7 +39,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'edist_core.urls'
+ROOT_URLCONF = 'thanatos_core.urls'
 
 TEMPLATES = [
     {
@@ -57,7 +57,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'edist_core.wsgi.application'
+WSGI_APPLICATION = 'thanatos_core.wsgi.application'
 
 
 # Database
