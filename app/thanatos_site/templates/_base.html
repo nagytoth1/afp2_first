@@ -9,11 +9,17 @@
     <link href="static/sidebars.css" rel="stylesheet">
 </head>
 
+<script>
+    function redirect() {
+        location.href = "http://127.0.0.1:8000/";
+    }
+</script>
+
 <body class="bg-dark">
-    <header class="mb-5 p-2 border-bottom border-secondary border-2">
-        <a href="/" class="d-flex align-items-center link-dark text-decoration-none">
-            <h2 class="headline text-danger sticky-top">Thanatos feladatkiosztó rendszer</h2>      
-        </a>
+    <header class="mb-5 p-2 border-bottom border-secondary text-center border-2">
+       <!-- <a href="/" class="d-flex align-items-center link-dark text-decoration-none"> -->
+            <h2 class="text-danger sticky-top" onclick="redirect()">Thanatos feladatkiosztó rendszer</h2>      
+        <!--</a> -->
     </header>
     <main>
         {% block content %}

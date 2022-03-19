@@ -1,9 +1,9 @@
 {% extends '_base.html' %}
 
 {% block content %}
-<div class="flex-shrink-0 pb-1 pt-4 bg-secondary rounded-2 ms-3" style="width: 22rem;">
+<div class="d-flex flex-shrink-0 pb-1 pt-4 bg-secondary rounded-2 ms-3" style="width: 21rem;">
     <ul class="ps-2">
-      <li class="p-2" style="font-family:Georgia;font-size: 19px;">
+      <li class="p-2" style="font-family:'Courier New', Courier, monospace;font-size: 19px;">
         <button class="btn btn-toggle align-items-center rounded collapsed text-light"
                 data-bs-toggle="collapse" 
                 data-bs-target="#home-collapse" 
@@ -11,9 +11,9 @@
                 style="font-size: 23px">Tárgyak
         </button>
         <div class="collapse show" id="home-collapse">
-          <ul class="btn-toggle-nav list-unstyled pb-1 small">
+          <ul class="mb-auto btn-toggle-nav list-unstyled pb-1 small">
             {% for i in subjects_names%}
-              <li><a href="/?s={{i.id}}" class="link-dark rounded text-light fw-bold ms-5">{{i.subject_name}}</a></li>
+              <li><a href="/?id={{i.id}}" class="link-dark rounded text-light fw-bold ms-5">{{i.subject_name}}</a></li>
             {% endfor %}
           </ul>
         </div>

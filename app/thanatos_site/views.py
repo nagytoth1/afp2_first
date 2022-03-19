@@ -7,7 +7,7 @@ from django.core.exceptions import ObjectDoesNotExist
 def mainPage(request):
     subjects = Subject.objects.all() # összes adatot lekérjük (Select *)
     
-    queryparam_subject = request.GET.get('s')
+    queryparam_subject = request.GET.get('id')
     
     #ha még nincs megadva subject query-paraméterként (s nincs beállítva vagy üres), akkor a főoldalt dobja ki
     if queryparam_subject is None or queryparam_subject == '':
@@ -19,4 +19,4 @@ def mainPage(request):
         #ha nem létezik, pl. s=32 van beállítva, akkor kivételkezelés, dobjon vissza a főoldalra
         except ObjectDoesNotExist: 
             return redirect('home')
-        return HttpResponse(f'<h1>{subject_data.subject_name}</h1>')
+        return render(request, 'tasks.html')

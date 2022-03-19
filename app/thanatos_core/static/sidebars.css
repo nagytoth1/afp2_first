@@ -44,6 +44,10 @@ main {
 
 .dropdown-toggle { outline: 0; }
 
+.d-flex {
+  display: flex!important;
+}
+
 .nav-flush .nav-link {
   border-radius: 0;
 }
