@@ -1,0 +1,42 @@
+1)Egy string-et kérjünk be, majd határozzuk meg melyik karakterből (A..Z, 0..9) hány darab szerepelt a stringben. Írassuk ki a nem megszámolt (ettől különböző karaktereket) a képernyőre. Határozzuk meg a legtöbbet előforduló karaktert, és írassuk ki a képernyőre.
+
+2)Egy 5 elemű vektort töltsünk fel véletlen [1,90] értékekkel oly módon, hogy ne legyen benne ismétlődés. A vektor elemeit (lottó szelvény) írjuk ki a képernyőre.
+
+3)Írjunk olyan programot, amely bekéri egy sorozat első négy elemét, majd meghatározza, hogy
+ez a 4 elem számtani sorozatot alkot-e (az elemek különbsége állandó)
+mértani sorozatot alkot-e (az elemek hányadosa állandó)
+egyéb jellegű sorozatot alkot-e
+
+4)Írjunk olyan programot, amely addig kér be egész számokat billentyozetről, amíg azok összege meg nem haladja a 100-at. A végén írjuk ki a bekért számok közül hány volt páros, és hány volt páratlan.
+
+5)Írjunk olyan programot, amely véletlen, kétszámjegyű értékekkel feltölt egy 30 elemá vektort, majd azt kiírja a képernyire egymás mellé, vesszővel elválasztva az elemeket. A kiírás után addig kérjünk be két egész számot (a, b), amíg az 'a' kisebb lesz, mint 'b'. Határozzuk meg, hogy hány olyan tömbelem van, amelyik az [a,b) intervallumba esik.
+
+6)Írjunk olyan programot, amely egy 10 elemű vektort a következőképp tölt fel billentyűzetről:
+    - bekérünk egy sorszámot
+    - leellenőrízzük hogy létezik-e ilyen vektorelem egyáltalán, és az még nem került feltöltésre.
+    - Ha ezen sorszámú vektorelem már kapott értéket, akkor azt még egyszer ne engedjük feltölteni
+    - ha minden rendben van, akkor bekérhetjük értéket is
+    - ha a sorszám -1, akkor kérjük be az értéket, és minden olyan tömbelem, amely még nem kapott értéket - annak legyen ez az értéke
+Ezt ismételgessük addig, amíg minden tömbelem meg nem kapta az értékét. Ekkor lépjünk ki a ciklusból, és írjuk ki a vektor elemeit a képernyőre.
+
+7)Írjunk olyan programot, amely bekéri egy sorozat első négy elemét, és egy ötödik értéket (d), majd eldönti, hogy az elemek különbsége rendre nagyobb-e a 'd' értékénél, vagy nem. Ha nem nagyobb, akkor kiírja, hogy melyik (mely) elemek különbsége nem megfelelő.
+
+8)Írjunk olyan programot, amely addig kér be egész számokat billentyozetről, amíg összesen legalább 10 db negatív vagy pozitív számot nem írunk be (a 0 nem számít sem negatív, sem pozitív számnak jelen feladatban). Kilépés után adjuk meg, melyik számtípusból írtunk be többet.
+
+9)Írjunk olyan programot, amely véletlen, három számjegyű értékekkel feltölt egy 40 elemű vektort, majd azt kiírja a képernyire egymás mellé, vesszővel elválasztva az elemeket. A kiírás után addig kérjünk be egy egész számot (a), amíg az is három számjegyű nem lesz. Határozzuk meg, hogy hány olyan tömbelem van, amelyik az [a-50,a+50) intervallumba esik.
+
+10)Írjunk olyan programot, amely egy 15 elemű vektort a következőképp tölt fel billentyűzetről:
+    - bekérünk egy sorszámot, és egy darabszámot, valamint egy értéket
+    - ezen sorszámtól ennyi darab még fel nem töltött tömbelemnek legyen az értéke a bekért szám
+    - amely tömbelem már kapott értéket, azok értéke ne változzon meg
+    - mindig írjuk ki, hogy hány darab vektorelem (és eseleg melyek) kaptak értéket ebben a körben
+    - figyeljünk rá, hogy nehogy alul-, vagy túlindexeljük a vektort
+Ezt ismételgessük addig, amíg minden tömbelem meg nem kapta az értékét. Ekkor lépjünk ki a ciklusból, és írjuk ki a vektor elemeit a képernyire. ( pl az alábbi esetben: darab=4, érték=10 4 db tömbelem kapja meg a 10 értéket).
+
+11)Írjunk olyan programot, amely bekéri egy sorozat elemeit, majd meghatározza, hogy
+    - ezen elemek számtani sorozatot alkotnak-e (az elemek különbsége állandó)
+    - nem számtani a sorozat jellege
+A program tetszőleges elemszámú sorozatra könnyedén átalakítható legyen. Tesztelési céllal működjön 5 elemre, de akár 100 elemű sorozatra is alkalmazható legyen a program jelentős mértékű átalakítása nélkül.
+
+
+
