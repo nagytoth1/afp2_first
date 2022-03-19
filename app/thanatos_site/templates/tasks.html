@@ -1,6 +1,13 @@
 {% extends '_base.html' %}
 {% block content %}
 <div class="container">
+    <a class="link-danger" href="/">Főoldal</a>
     <h2 class="text-light" style="font-family:'Courier New', Courier, monospace">Feladatok: </h2>
+    {% for feladat in feladatok %}
+        <div class="text-light position-relative ms-5 me-5 pt-2"> <!--Itt lesznek a feladatok-->
+            {{feladat.desc}}
+        </div>
+    {% endfor %}
 </div>
+
 {% endblock content %}
