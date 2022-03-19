@@ -17,6 +17,15 @@ main {
   overflow-y: hidden;
 }
 
+.headline{
+  margin: .5rem .8rem;
+  padding-left: 1rem;
+}
+
+.headline:hover{
+  text-decoration:underline;
+}
+
 .b-example-divider {
   flex-shrink: 0;
   width: 1.5rem;
@@ -51,7 +60,7 @@ main {
 .btn-toggle:hover,
 .btn-toggle:focus {
   color: rgba(0, 0, 0, .85);
-  background-color: #d2f4ea;
+  background-color: #742e00;
 }
 
 .btn-toggle::before {
@@ -79,7 +88,7 @@ main {
 }
 .btn-toggle-nav a:hover,
 .btn-toggle-nav a:focus {
-  background-color: #d2f4ea;
+  background-color: #742e00;
 }
 
 .scrollarea {
