@@ -4,9 +4,13 @@
     <a class="link-danger" href="/">Főoldal</a>
     <h2 class="text-light" style="font-family:'Courier New', Courier, monospace">Feladatok: </h2>
     {% for task in tasks %}
-        <div class="text-light position-relative ms-5 me-5 pt-2"> <!--Itt lesznek a feladatok-->
+        <div class="d-inline text-light position-relative pt-5  mt-3" style="top:1.5rem; left:1rem;">
+            <b><i>{{forloop.counter}}.</i></b>
+        </div>
+        <div class="d-inline-block text-light position-relative ms-5 me-6 "> <!--Itt lesznek a feladatok-->
             {{task.description}}
         </div>
+        <br>
     {% endfor %}
 </div>
 
