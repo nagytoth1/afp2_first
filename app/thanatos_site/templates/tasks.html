@@ -14,7 +14,8 @@
             <script>
                 function optionValidation()
                 {
-                    let label = document.getElementById("btnoption");
+                    let label = document.getElementById("isCorrect");
+                    label.innerHTML = '✔';
                 }
             </script>
             {% for option in task.options_as_list %}
@@ -23,6 +24,7 @@
                     <label class="btn options" onclick="optionValidation()" id="btnoption" for="btnradio1">{{option}}</label>
                 </div>
             {% endfor %}
+            <div class="d-inline-block" id="isCorrect"></div>
         </div>
     {% endfor %}
 </div>
