@@ -7,8 +7,11 @@
 .options {
     background-color:rgba(165, 42, 42, 0);
     display: inline-block;
-    top: 50%;
     color:rgb(165, 42, 42); 
     border-color: brown; 
     border-width: 0.1rem;
+}
+
+#isCorrect {
+    top: 50%!important;
 }
