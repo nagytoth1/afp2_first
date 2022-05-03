@@ -1,0 +1,12 @@
+.options:hover {
+    border-width: 2px!important;
+    background-color:rgba(165, 42, 42, 0.5);
+    color:white!important;
+}
+
+.options {
+    background-color:rgba(165, 42, 42, 0);
+    color:rgb(165, 42, 42); 
+    border-color: brown; 
+    border-width: 0.1rem;
+}
