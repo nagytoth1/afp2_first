@@ -11,10 +11,16 @@
             {{task.description}}
         </div>
         <div class="ps-5">
+            <script>
+                function optionValidation()
+                {
+                    let label = document.getElementById("btnoption");
+                }
+            </script>
             {% for option in task.options_as_list %}
                 <div class="btn-group pt-4 pe-3" role="group" aria-label="Basic radio toggle button group">
                     <input type="radio" class="btn-check" name="btnradio" id="btnradio1" autocomplete="off" checked>
-                    <label class="btn options" for="btnradio1">{{option}}</label>
+                    <label class="btn options" onclick="optionValidation()" id="btnoption" for="btnradio1">{{option}}</label>
                 </div>
             {% endfor %}
         </div>
