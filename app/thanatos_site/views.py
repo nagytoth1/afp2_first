@@ -17,6 +17,7 @@ def mainPage(request):
     else:
         curr_subject = subjects.filter(id__exact=queryparam_subject) #lekérem id alapján a kiválasztott tárgyat
         filtered_tasks = subject_tasks.filter(subject__exact=curr_subject.first()) # a first()-el megkapom a tárgy nevét stringként és arra szűrök
+        
         try:
             subject_data:Subject = Subject.objects.get(pk=queryparam_subject)
         #ha nem létezik, pl. s=32 van beállítva, akkor kivételkezelés, dobjon vissza a főoldalra

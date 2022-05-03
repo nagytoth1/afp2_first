@@ -16,6 +16,12 @@ class Task(Model):
     difficulty = models.SmallIntegerField() #1-2-3-nehézségek
     subject = models.ForeignKey(Subject, default=None, on_delete=models.DO_NOTHING, related_name='subject')
     type = models.ForeignKey(Type, default=None, on_delete=models.DO_NOTHING, related_name='type')
+    options = models.TextField(default="")
+    answer = models.TextField(default="")
+
+    def options_as_list(self):
+        return self.options.split(';')
 
     def __str__(self) -> str:
         return f"{self.subject} \t {self.description} \t Nehézség: {self.difficulty}"
+
