@@ -32,20 +32,8 @@ function countElapsedTime(startTime, elapsedMinutes) {
 }
 
 //Checks whether the selected radiobutton contains the correct answer or not.
-function checkAnswer(answer) {
+function checkAnswer(id, answer) {
     //gets every single radiobutton to a list (NodeListOf<HTMLElement>)
-    var buttons = document.getElementsByName('answer');
-    var result = "❌";
-
-    for(i = 0; i < buttons.length; i++) {
-        console.log(buttons[i].checked);
-        if(buttons[i].checked && buttons[i].value == answer)
-        {
-            result = "✔";
-            break;
-        }
-    }
-    
-    console.log(result);
+    result = id == answer ? "✔" : "❌";
     document.getElementById('isCorrect').innerHTML = result;
 }

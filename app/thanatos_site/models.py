@@ -23,5 +23,5 @@ class Task(Model):
         return self.options.split(';')
 
     def __str__(self) -> str:
-        return f"{self.subject} \t {self.description} \t Nehézség: {self.difficulty}"
+        return f"Tantárgy: {self.subject}\nleírás: {self.description}\nnehézség: {self.difficulty}"
 

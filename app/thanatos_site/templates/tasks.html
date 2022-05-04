@@ -1,23 +1,24 @@
 {% extends '_base.html' %}
 {% block content %}
 <div class="container">
-    <a class="link-danger" href="/">Főoldal</a>
-    <h2 class="text-light" style="font-family:'Courier New', Courier, monospace">Feladatok: </h2>
+    <a class="link-danger d-flex mx-auto text-center justify-content-center" style="font-size:27px;" href="/">Főoldal</a>
+    <h2 class="text-light my-4">Feladatok: </h2>
     {% for task in tasks %}
-        <div class="d-inline text-light position-relative pt-5  mt-3" style="top:1.5rem; left:1rem;">
-            <b><i>{{forloop.counter}}.</i></b>
+        <div class="d-inline text-light ps-3">
+            <b><i><p style="display:inline;">{{forloop.counter}}.</p></i></b>
         </div>
-        <div class="d-inline-block text-light position-relative ms-5 me-6 "> <!--Itt lesznek a feladatok-->
-            {{task.description}}
+        <div class="d-inline-block text-light position-relative ms-3"> <!--Itt lesznek a feladatok-->
+            <p>{{task.description}}</p>
         </div>
-        <div class="ps-5">
-            <div class="btn-group py-3 px-2" role="group">
+            <div class="ps-5 mt-2 mb-4 d-block">
+            <div class="radio-answers d-inline">
             {% for option in task.options_as_list %}
-                <input type="radio" class="btn-check" id="answer" autocomplete="off">
-                <label class="btn options me-5" onclick="checkAnswer('válasz1')" for="answer">{{option}}</label>
+                <input type="radio" id="answer{{ forloop.counter }}" name="answer" value="{{option}}" checked>
+                <label class="mx-3" onclick="checkAnswer({{ forloop.counter }}, '{{task.answer}}')" for="answer{{forloop.counter}}">{{option}}</label>
             {% endfor %}
+                <p style="font-size:20px;" class="mx-3 mt-3" id="isCorrect"></p>
             </div>
-            <p class="pt-2" style="font-size:20px;" id="isCorrect"></p>
+            
         </div>
     {% endfor %}
 </div>
