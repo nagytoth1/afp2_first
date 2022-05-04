@@ -54,3 +54,15 @@ p
 .radio-answers label:hover {
     background-color: rgba(165, 165, 165, 0.904);
 }
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    background: rgb(78, 85, 88);
+    color: wheat;
+    text-align: center;
+    font-size: larger;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

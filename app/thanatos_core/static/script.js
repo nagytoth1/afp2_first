@@ -37,3 +37,14 @@ function checkAnswer(id, answer) {
     result = id == answer ? "✔" : "❌";
     document.getElementById('isCorrect').innerHTML = result;
 }
+
+function getCurrentTime() {
+    var today = new Date();
+    var currHour = today.getHours().toString().padStart(2, "0");
+    var currMinute = today.getMinutes().toString().padStart(2, "0");
+    var currSec = today.getSeconds().toString().padStart(2, "0");
+    var currentTime = `${currHour}:${currMinute}:${currSec}`;
+    document.getElementById('currentTime').innerHTML = currentTime;
+    setTimeout(function () { getCurrentTime() }, 1000);
+}
+
