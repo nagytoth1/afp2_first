@@ -9,7 +9,7 @@
     display: inline-block;
     color:rgb(165, 42, 42); 
     border-color: brown; 
-    border-width: 0.1rem;
+    border-width: 3px;
 }
 
 #isCorrect {

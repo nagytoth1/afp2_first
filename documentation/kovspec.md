@@ -1,39 +1,39 @@
 # Követelmény specifikáció
 
 ### Áttekintés
-
-###TODO
+Ezen dokumentum a megrendelő 
 
 ### Jelenlegi helyzet
 
 ###TODO
 
 ### Vágyálomrendszer
-
 	- Tudjuk nyomon követni a rendszeridőt (naplózás és a hallgatók időbeli igazodása szempontjából fontos)
 	- 45 percenként figyelmeztessen (hallgató álljon fel a géptől, mozogjon)
 	- Jó lenne, ha adatbázis-kapcsolatot használhatnánk a későbbiekben a feladatra adott válaszok pontszámainak tárolására 
 	(a session idejére).
 	- Jó lenne, ha meg tudnánk nézni a weboldal látogatásainak időpontjait naplózás szempontjából.
 	- Szeretnénk, hogy az weboldal gördülékenyen reagáljon, legyen reszponzív.
-	- Az adatbázis legyen egy internetes repozitóriumból elérhető
 
 ### Elvárások
-
-###TODO
+Egy online hallgatóbarát weboldal elkészítése. Emellett a tárgyakat lehessen kilistázni, 
+minden tanuló véletlenszerűen feladatokat kapjon feladatokat, amelyeket a füzetében, 
+esetleg akár a weboldallal is interakcióba lépve meg tud oldani. 
+Ezek lehetnek házi feladatok, korábbi zárthelyi dolgozatokból kiragadott, lebutított feladatok is.
+A feladatok eltárolására egy egész adatbázis szolgáljon.
 
 ## Követelménylista
 
-|    Modul    	| ID |       Név        	|                                                        Kifejtés                                                       		|
-|-------------	|----|--------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
-| Interface   	| I1 | Menüsor   		| Ne legyen túlgondolva, a PTI-s tárgyak legyenek kilistázva, ezekre kattintva átvisz a megfelelő oldal feladatlistájára. 		|
-| Interface	| I2 | Felhasználói felület	| A teljes felhasználói felület legyen leegyszerűsített, minimalista.									|
-| Interface 	| I3 | Egyéb hivatkozások      	| Legyenek hivatkozások a suli honlapjára, Neptun-oldalára, az e-learning-oldalra							|
-| Interface	| I4 | Feladatkiosztó		| A feladatok sablonjait töltsük ki az adatbázisból olvasott adatokkal.									|
-| Datastore 	| D1 | Adattárolási mód 	| Egy adatbázis-táblában eltároljuk a különböző tárgyakhoz kapcsolódó feladatok részleteit, ezek megfelelő helyekre beollózva.		|
+|    Modul    	| ID |       Név        		|                                                        Kifejtés                                                       		|
+|---------------|----|--------------------------|---------------------------------------------------------------------------------------------------------------------------------------|
+| Interface   	| I1 | Menüsor   				| Ne legyen túlgondolva, a PTI-s tárgyak legyenek kilistázva, ezekre kattintva átvisz a megfelelő oldal feladatlistájára. 		|
+| Interface		| I2 | Felhasználói felület		| A teljes felhasználói felület legyen leegyszerűsített, minimalista.									|
+| Interface 	| I3 | Egyéb hivatkozások   	| Legyenek hivatkozások a suli honlapjára, Neptun-oldalára, az e-learning-oldalra							|
+| Interface		| I4 | Feladatkiosztó			| A feladatok sablonjait töltsük ki az adatbázisból olvasott adatokkal.									|
+| Datastore 	| D1 | Adattárolási mód 		| Egy adatbázis-táblában eltároljuk a különböző tárgyakhoz kapcsolódó feladatok részleteit, ezek megfelelő helyekre beollózva.		|
 | Datastore 	| D2 | Tervezett karbantartás	| A feladatok adatbázisa félévek kezdete előtti héten legyen takarítva, lehetőleg inkább egyre bővebb készlet álljon rendelkezésre.	|
-| Datastore 	| D3 | Adatbázis        	| Tároljuk az adatokat adatbázisban, szerkezete legyen a lehető legegyszerűbb, mivel sok feladat részleteit fogunk tárolni. 		|
-| Feature   	| F1 | Rendszeridő      	| Mutasson rendszeridőt a képernyő valamely, a munka szempontjából kevésbé zavaró részén.						|
+| Datastore 	| D3 | Adatbázis	        	| Tároljuk az adatokat adatbázisban, szerkezete legyen a lehető legegyszerűbb, mivel sok feladat részleteit fogunk tárolni. 		|
+| Feature   	| F1 | Rendszeridő  	    	| Mutasson rendszeridőt a képernyő valamely, a munka szempontjából kevésbé zavaró részén.						|
 | Feature   	| F2 | Random adatolvasás      	| Az adatbázisból olvassunk ki véletlenszerűen egy rekordot (egy feladat-csomagot) a tárgynak megfelelő rekeszekből.			|
 
 ### Rendszerre vonatkozó törvények
@@ -89,11 +89,6 @@ Ezen szabályok megsértése az Alkalmazás használati lehetőségeinek azonnal
 – beleértve esetleges büntetőjogi lépések megtételét is – vonja maga után a Felhasználóval, más jogsértő személlyel szemben a Tulajdonos és/vagy a 
 Szellemi Tulajdon egyéb jogosultjai által.
 
-
-### Használat
-
-###TODO
-
 ### Felelősségi szabályok
 
 Az Alkalmazáshoz kapcsolódó adatbázis módosítása kizárólag az Üzemeltető által, illetve az Alkalmazást üzemeltető webkiszolgálón keresztül
@@ -105,32 +100,31 @@ eszközökkel biztosítja, hogy az Alkalmazás használata technikai szempontbó
 
 Az Alkalmazáshoz való csatlakozás miatt bekövetkező károkért, az internetes hálózat esetleges üzemkimaradásából, 
 az elérési út hibájából, bármely nem várt technikai hibából eredő adatvesztésért, vírusból, vagy más károkért a Tulajdonos nem felelős. 
-A Felhasználóknak minden esetben fel kell mérniük, hogy rendelkeznek-e az Alkalmazás használatához szükséges ismeretekkel, 
+A Felhasználóknak minden esetben fel kell mérniük, hogy rendelkeznek-e a böngészők használatához szükséges ismeretekkel, 
 technikai követelményekkel és teljesítményekkel.
 A Tulajdonos fenntartja magának a jogot arra, hogy amennyiben valamely Felhasználó részéről bármilyen manipulációt, tömegesen generált letöltést,
-illetve az Alkalmazás szellemével bármilyen módon összeférhetetlen vagy azt sértő magatartást tapasztal, 
-vagy ennek megalapozott gyanúja felmerül, úgy a Felhasználót azonnali hatállyal kizárja az Alkalmazás felhasználói köréből.
-
+illetve az internetes felület szellemével bármilyen módon összeférhetetlen vagy azt sértő magatartást tapasztal, 
+vagy ennek megalapozott gyanúja felmerül, úgy a Felhasználót azonnali hatállyal kizárja az internetes felület felhasználói köréből.
 
 
 ### Technikai követelmények
-Az Alkalmazás használatához szükséges technikai feltételek: Windows 10 operációs rendszer valamint minimum 400 MB szabad tárhely. 
-A technikai feltételeket az Alkalmazás letöltéséhez és használatához a Felhasználónak kell teljesítenie. A technikai feltételek nem teljesüléséért a Tulajdonos nem vonható felelősségre.
-Ugyanígy nem vonható felelősségre a Tulajdonos az Alkalmazás használatából a készüléken bekövetkező adatvesztésért, meghibásodásért. 
+Az internetes felület használatához szükséges technikai feltételek: 
+- megfelelő (vezetékes vagy vezeték nélküli) internetes kapcsolattal rendelkező személyi számítógép 
+Windows 7, 8, 10, esetleg 11 operációs rendszerekkel, monitorral ellátva, valamint egy böngészőprogram megléte is szükséges. 
+A technikai feltételeket az internetes felület használatához az operációs rendszer alapértelmezetten teljesíti. 
+Amennyiben a technikai feltételek nem teljesülnek, az alkalmazás nem használható, 
+ezért a szerzők nem vonhatóak felelősségre.
 A Tulajdonos kizár minden kártérítési felelősséget az Alkalmazáshoz csatlakozó minden külső szerver által nyújtott
 vagy megjelenített adattal, információval kapcsolatban is.
-
-Az Alkalmazás telepítéssel vehető használatba.
-
+Az alkalmazás a böngészőfelület címsorába begépelt megfelelő címmel (URL/link/hiperhivatkozás birtokában) vehető használatba.
 
 ### Garancia és kártérítés
 
-Az Alkalmazás használatához a felhasználói oldalon szükséges – fent meghatározott vagy bármely egyéb - technikai feltételeket a Felhasználónak kell biztosítania, teljesítenie.
+Az internetes felület használatához a felhasználói oldalon szükséges – fent meghatározott vagy bármely egyéb - technikai feltételeket a Felhasználónak kell biztosítania, teljesítenie.
 Ezen technikai feltételek nem teljesüléséért a Tulajdonos nem vonható felelősségre. Ugyanígy nem vonható felelősségre a Tulajdonos az Alkalmazás használatából adódóan, 
 a készüléken bekövetkező adatvesztésért, meghibásodásért. A Tulajdonos kizár minden kártérítési felelősséget az Alkalmazáshoz csatlakozó minden külső szoftver által nyújtott
-vagy megjelenített adattal, információval kapcsolatban. A Tulajdonos nem vállal garanciát az Alkalmazás megszakításmentes működéséért, 
+vagy megjelenített adattal, információval kapcsolatban. A Tulajdonos nem vállal garanciát az internetes felület megszakításmentes működéséért, 
 valamint vis major hibákért. Az ebből eredő adatvesztésért, tartalom vesztésért a Tulajdonos szintén nem tartozik kártérítési felelősséggel.
-
 
 ### Egyéb rendelkezések
 
@@ -159,10 +153,10 @@ A megrendelő fontosnak tartja továbbá, hogy a diákok visszajelzéseket kapja
 
 ### Igényelt üzleti folyamatok
 
-Fent említett okokból következően cégünknek is haladnia kell jelen korunk egyre növekvő elvárásaival, 
-és ezáltal szükséges lépéssé vált egy jól funkcionáló feladatkiosztó rendszer kiépítése.
+Fent említett okokból következően intézményünknek is haladnia kell jelen korunk egyre növekvő elvárásaival, 
+és ezáltal szükséges lépéssé vált egy jól funkcionáló, hallgatói igényeket teljes mértékben kielégítő feladatkiosztó rendszer kiépítése.
 Ezalatt egy online webes felületet értünk, amelynek segítségével lehetőséget kapnak 
-az intézmény tanárai egy szerveren tárolt adatbázisba kigyűjteni a hallgatóknak szánt feladatok részleteit.
+az intézmény tanárai egy szerveren tárolt adatbázisba kigyűjteni a hallgatóknak szánt feladatokat, ennek minden részletével együtt.
 
 ### Fogalomtár
 	- Grafikus felhasználói felület - GUI: a számítógép és ember közti kapcsolatot megvalósító elemek összessége. 
