@@ -28,3 +28,17 @@ function countElapsedTime(startTime, elapsedMinutes) {
         time.style.color = 'red';
     }
 }
+
+//Checks whether the selected radiobutton contains the correct answer or not.
+function checkAnswer(answer) {
+    //gets every single radiobutton to a list (NodeListOf<HTMLElement>)
+    var buttons = document.getElementsByName('gender');
+    var result = "❌";
+      
+    for(i = 0; i < buttons.length; i++) {
+        if(buttons[i].checked && buttons[i].value == answer)
+            result = "✔";
+    }
+    console.log(result);
+    document.getElementById('result').innerHTML = result;
+}
